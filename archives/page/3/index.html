@@ -3,24 +3,19 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>vue-04-vue动画 - ysyのblog</title>
+<title>归档 - ysyのblog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="vue动画使用过渡类名实现动画 v-enter v-enter-active v-enter-to v-leave v-leave-active v-leave-to  设置动画">
-<meta name="keywords" content="vuejs,基础知识">
-<meta property="og:type" content="article">
-<meta property="og:title" content="vue-04-vue动画">
-<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/vue-04-vue动画/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="ysyのblog">
+<meta property="og:url" content="https://yang-shengyong.github.io/archives/page/3/index.html">
 <meta property="og:site_name" content="ysyのblog">
-<meta property="og:description" content="vue动画使用过渡类名实现动画 v-enter v-enter-active v-enter-to v-leave v-leave-active v-leave-to  设置动画">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-15T08:18:41.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue-04-vue动画">
-<meta name="twitter:description" content="vue动画使用过渡类名实现动画 v-enter v-enter-active v-enter-to v-leave v-leave-active v-leave-to  设置动画">
+<meta name="twitter:title" content="ysyのblog">
 <meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
 
 
@@ -95,7 +90,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="vue-04-vue动画" height="28">
+                <img src="/images/logo.svg" alt="ysyのblog" height="28">
             
             </a>
         </div>
@@ -140,161 +135,59 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="tag is-link">
+        2019
+        </h3>
+        <div class="timeline">
+        
+            <article class="media">
+                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-08-14T04:12:02.032Z">2019-08-14</time>
+                        <a href="/2019/08/14/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/categories/教学/">教学</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+        </div>
+    </div>
+</div>
+
     
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.008Z">2019-08-15</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/vuejs/">vuejs</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 257 个字)
-                </span>
-                
-                
-                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
-                    <i class="far fa-eye"></i>
-                    <span id="busuanzi_value_page_pv">0</span>次访问
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                vue-04-vue动画
-            
-        </h1>
-        <div class="content">
-            <h3 id="vue动画"><a href="#vue动画" class="headerlink" title="vue动画"></a>vue动画</h3><h4 id="使用过渡类名实现动画"><a href="#使用过渡类名实现动画" class="headerlink" title="使用过渡类名实现动画"></a>使用过渡类名实现动画</h4><ul>
-<li>v-enter</li>
-<li>v-enter-active</li>
-<li>v-enter-to</li>
-<li>v-leave</li>
-<li>v-leave-active</li>
-<li>v-leave-to</li>
-</ul>
-<h4 id="设置动画"><a href="#设置动画" class="headerlink" title="设置动画"></a>设置动画</h4><a id="more"></a>
 
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="hljs-selector-tag">style</span>&gt;</span><br><span class="line">    <span class="hljs-selector-class">.v-enter</span>,</span><br><span class="line">    <span class="hljs-selector-class">.v-leave-to</span> &#123;</span><br><span class="line">      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;</span><br><span class="line">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(150px)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-selector-class">.v-enter-active</span>,</span><br><span class="line">    <span class="hljs-selector-class">.v-leave-active</span> &#123;</span><br><span class="line">      <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.8s</span> ease</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	//自定义v-前缀</span><br><span class="line">	<span class="hljs-selector-class">.my-enter</span>,</span><br><span class="line">    <span class="hljs-selector-class">.my-leave-to</span> &#123;</span><br><span class="line">      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;</span><br><span class="line">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateX</span>(500px)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-selector-class">.my-enter-active</span>,</span><br><span class="line">    <span class="hljs-selector-class">.my-leave-active</span> &#123;</span><br><span class="line">      <span class="hljs-attribute">transition</span>: all <span class="hljs-number">1s</span> ease</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>使用官方提供的标签transition把需要被动画控制的元素包裹起来</li>
-</ul>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"app"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"change"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"flag=!flag"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">transition</span>&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"flag"</span>&gt;</span>helloworld<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">transition</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"my"</span>&gt;</span></span><br><span class="line">        <span class="hljs-comment">&lt;!-- 加个name来定义自己的动画 --&gt;</span></span><br><span class="line">      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"flag"</span>&gt;</span>helloworld<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="使用钩子函数实现动画"><a href="#使用钩子函数实现动画" class="headerlink" title="使用钩子函数实现动画"></a>使用钩子函数实现动画</h4><ul>
-<li><p>v-on:before-enter=”beforeEnter”</p>
-</li>
-<li><p>v-on:enter=”enter”</p>
-</li>
-<li><p>v-on:after-enter=”afterEnter”</p>
-<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">beforeEnter(el) &#123;</span><br><span class="line">          el.style.transform = <span class="hljs-string">"translate(0, 0)"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        enter(el, done) &#123;</span><br><span class="line">          el.offsetWidth <span class="hljs-comment">//这句话没实际作用，可以认为强制动画刷新</span></span><br><span class="line">          el.style.transform = <span class="hljs-string">"translate(150px, 450px)"</span></span><br><span class="line">          el.style.transition = <span class="hljs-string">'all 1s ease'</span></span><br><span class="line">          done() <span class="hljs-comment">//done其实是afterEnter的引用，动画完成后立即执行afterEnter</span></span><br><span class="line">        &#125;,</span><br><span class="line">        afterEnter(el) &#123;</span><br><span class="line">          <span class="hljs-keyword">this</span>.flag = !<span class="hljs-keyword">this</span>.flag</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>列表的排列过渡用<transition-group></transition-group></p>
-<ul>
-<li><p>给transition-group添加appear属性，实现一个入场效果</p>
-</li>
-<li><p>设置tag=”ul”指定transition-group渲染成ul，否则默认渲染成span</p>
-<p><transition-group appear tag="ul"></transition-group></p>
-</li>
-</ul>
-</li>
-</ul>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/vuejs/">vuejs</a>, <a class="has-link-grey -link" href="/tags/基础知识/">基础知识</a>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="social-share"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
-<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
-        
-    </div>
-</div>
-
-
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<a class="button is-success donate">
-    <span class="icon is-small">
-        <i class="fab fa-weixin"></i>
-    </span>
-    <span>微信</span>
-    <div class="qrcode"><img src="/images/wechat.png" alt="微信"></div>
-</a>
-
-                
-        </div>
-    </div>
-</div>
-
-
-
+    
 <div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/vue-05-vue组件/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">vue-05-vue组件</span>
-            </a>
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/archives/page/2/">上一页</a>
         </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/vue-03-品牌案例及其延伸/">
-                <span class="level-item">vue-03-品牌案例及其延伸</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
+        <div class="pagination-next is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/archives/page/4/">下一页</a>
         </div>
-        
-    </div>
-</div>
-
-
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="title is-5 has-text-weight-normal">评论</h3>
-        
-<div id="valine-thread" class="content"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    new Valine({
-        el: '#valine-thread' ,
-        notify: false,
-        verify: false,
-        app_id: 'PjazMgPX9CMnvlK4VSYVC5Xe-MdYXbMMI',
-        app_key: 'nJAAmKuae6jFKEcohIC2gatr',
-        placeholder: '我想说...'
-    });
-</script>
-
-    </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/archives/">1</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/archives/page/2/">2</a></li>
+            
+            <li><a class="pagination-link is-current" href="/archives/page/3/">3</a></li>
+            
+        </ul>
+    </nav>
 </div>
 </div>
                 
@@ -974,7 +867,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="vue-04-vue动画" height="28">
+                    <img src="/images/logo.svg" alt="ysyのblog" height="28">
                 
                 </a>
                 <p class="is-size-7">
