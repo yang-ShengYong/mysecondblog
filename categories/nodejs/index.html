@@ -3,24 +3,19 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>vue-05-vue组件 - ysyのblog</title>
+<title>分类: nodejs - ysyのblog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="vue组件啥是组件？为了拆分vue实例的代码量，能够让我们以不同的组件，来划分不同的功能模块，将来需要什么样的功能，就去调用对应的组件 。 组件化和模块化的不同：  模块化：按照代码逻辑来划分成不同的模块，方便代码分层开发，保证每个模块功能的单一。 组件化：按照UI界面进行划分，方便UI组件的重用。">
-<meta name="keywords" content="vuejs,基础知识">
-<meta property="og:type" content="article">
-<meta property="og:title" content="vue-05-vue组件">
-<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/vue-05-vue组件/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="ysyのblog">
+<meta property="og:url" content="https://yang-shengyong.github.io/categories/nodejs/index.html">
 <meta property="og:site_name" content="ysyのblog">
-<meta property="og:description" content="vue组件啥是组件？为了拆分vue实例的代码量，能够让我们以不同的组件，来划分不同的功能模块，将来需要什么样的功能，就去调用对应的组件 。 组件化和模块化的不同：  模块化：按照代码逻辑来划分成不同的模块，方便代码分层开发，保证每个模块功能的单一。 组件化：按照UI界面进行划分，方便UI组件的重用。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-15T08:19:13.670Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue-05-vue组件">
-<meta name="twitter:description" content="vue组件啥是组件？为了拆分vue实例的代码量，能够让我们以不同的组件，来划分不同的功能模块，将来需要什么样的功能，就去调用对应的组件 。 组件化和模块化的不同：  模块化：按照代码逻辑来划分成不同的模块，方便代码分层开发，保证每个模块功能的单一。 组件化：按照UI界面进行划分，方便UI组件的重用。">
+<meta name="twitter:title" content="ysyのblog">
 <meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
 
 
@@ -95,7 +90,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="vue-05-vue组件" height="28">
+                <img src="/images/logo.svg" alt="ysyのblog" height="28">
             
             </a>
         </div>
@@ -141,173 +136,468 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">分类</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">nodejs</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.025Z">2019-08-15</time>
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.137Z">2019-08-15</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/vuejs/">vuejs</a>
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 486 个字)
+                    3 分钟 读完 (大约 514 个字)
                 </span>
                 
-                
-                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
-                    <i class="far fa-eye"></i>
-                    <span id="busuanzi_value_page_pv">0</span>次访问
-                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                vue-05-vue组件
+                <a class="has-link-black-ter" href="/2019/08/15/我第一天学nodejs的笔记02/">nodejs-用node轻松构建一个web服务器（http模块）</a>
             
         </h1>
         <div class="content">
-            <h3 id="vue组件"><a href="#vue组件" class="headerlink" title="vue组件"></a>vue组件</h3><p>啥是组件？为了拆分vue实例的代码量，能够让我们以不同的组件，来划分不同的功能模块，将来需要什么样的功能，就去调用对应的组件 。</p>
-<p>组件化和模块化的不同：</p>
-<ul>
-<li>模块化：按照代码逻辑来划分成不同的模块，方便代码分层开发，保证每个模块功能的单一。</li>
-<li>组件化：按照UI界面进行划分，方便UI组件的重用。</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="创建组件的3种方式"><a href="#创建组件的3种方式" class="headerlink" title="创建组件的3种方式"></a>创建组件的3种方式</h3><ul>
-<li><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vue.componemt(<span class="hljs-string">'mycom1'</span>, Vue.extend(&#123;</span><br><span class="line">    template: <span class="hljs-string">'&lt;h3&gt;这是一个组件&lt;/h3&gt;'</span></span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="hljs-string">'mycom2'</span>, &#123;</span><br><span class="line">    template: <span class="hljs-string">'&lt;div&gt;&lt;/div&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"tmpl"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-javascript">Vue.component(<span class="hljs-string">'mycom2'</span>, &#123;</span></span><br><span class="line"><span class="hljs-javascript">    template: <span class="hljs-string">'#tmpl'</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="创建私有组件"><a href="#创建私有组件" class="headerlink" title="创建私有组件"></a>创建私有组件</h3><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"login"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">    一个私有组件    </span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-javascript">  <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="hljs-javascript">    el: <span class="hljs-string">'#app'</span>,</span></span><br><span class="line">    data: &#123;&#125;,</span><br><span class="line">    methods: &#123;&#125;,</span><br><span class="line">    components: &#123;</span><br><span class="line">      login: &#123;</span><br><span class="line"><span class="hljs-javascript">        template: <span class="hljs-string">'#login'</span></span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    filters: &#123;&#125;,</span><br><span class="line">    directives: &#123;&#125;,</span><br><span class="line">      </span><br><span class="line">    beforeCreate () &#123;&#125;,</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="组件中的data"><a href="#组件中的data" class="headerlink" title="组件中的data"></a>组件中的data</h3><blockquote>
-<p>组件中的data必须写成function形式，并且得返回一个对象</p>
+            <blockquote>
+<p>与fs文件模块一样，http模块也是nodejs核心模块中的一个<br>当学到这儿的时候我突然真正体会到了模块化编程究竟是什么样的过程</p>
 </blockquote>
-<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="hljs-string">'mycom'</span>, &#123;</span><br><span class="line">  template: <span class="hljs-string">'&lt;h1&gt;&#123;&#123; msg &#125;&#125;&lt;/h1&gt;'</span>,</span><br><span class="line">  data: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> &#123;</span><br><span class="line">      msg: <span class="hljs-string">'helloworld'</span> </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="组件切换"><a href="#组件切换" class="headerlink" title="组件切换"></a>组件切换</h3><blockquote>
-<p>除了v-if v-else外，用component标签占位可以来实现切换</p>
-</blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">component</span> <span class="hljs-attr">:is</span>=<span class="hljs-string">"'login'"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">component</span>&gt;</span> //双引号里必须是字符串，要不然会把它看成变量</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-javascript">	Vue.component(<span class="hljs-string">'login'</span>, &#123;</span></span><br><span class="line"><span class="hljs-xml">    template: '<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>deng'lu<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>'</span></span><br><span class="line">  &#125;)</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="组件切换加动画和mode"><a href="#组件切换加动画和mode" class="headerlink" title="组件切换加动画和mode"></a>组件切换加动画和mode</h3><blockquote>
-<p>mode=”out-in”先出后进 in-out 先进后出</p>
-</blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">transition</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">"out-in"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">component</span> <span class="hljs-attr">:is</span>=<span class="hljs-string">"comName"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">component</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">transition</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="父组件向子组件传值"><a href="#父组件向子组件传值" class="headerlink" title="父组件向子组件传值"></a>父组件向子组件传值</h3><blockquote>
-<p>在子组件上绑定父属性</p>
-<p>用props注册传过来的值的名（注意命名）</p>
-</blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"app"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">son</span> <span class="hljs-attr">:parentmsg</span>=<span class="hljs-string">"msg"</span> <span class="hljs-attr">:tip</span>=<span class="hljs-string">"msg2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">son</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-javascript">    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="hljs-javascript">      el: <span class="hljs-string">'#app'</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="hljs-javascript">        msg: <span class="hljs-string">'helloworld'</span>,</span></span><br><span class="line"><span class="hljs-javascript">        msg2: <span class="hljs-string">'命名还有讲究'</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        </span><br><span class="line">      &#125;,</span><br><span class="line">      components: &#123;</span><br><span class="line">        son: &#123;</span><br><span class="line"><span class="hljs-xml">          template: '<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>i want to say &#123;&#123; parentmsg &#125;&#125; &#123;&#123; tip &#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>',</span></span><br><span class="line"><span class="hljs-javascript">          props: [<span class="hljs-string">'parentmsg'</span>, <span class="hljs-string">'tip'</span>]</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="父组件向子组件传方法"><a href="#父组件向子组件传方法" class="headerlink" title="父组件向子组件传方法"></a>父组件向子组件传方法</h3><blockquote>
-<p>先创建子组件</p>
-<p>使用子组件时，给来自父组件的方法起个别名sonfunc</p>
-<p>使用this.$emit(‘别名’，第一个形参，第二个形参)</p>
-</blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"app"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">son</span> @<span class="hljs-attr">sonfunc</span>=<span class="hljs-string">"fatherfunc"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">son</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"son"</span>&gt;</span></span><br><span class="line">	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"show"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"myclick"</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-javascript">    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="hljs-javascript">      el: <span class="hljs-string">'#app'</span>,</span></span><br><span class="line">      data: &#123;</span><br><span class="line"><span class="hljs-javascript">        msg: <span class="hljs-string">'helloworld'</span>,</span></span><br><span class="line"><span class="hljs-javascript">        msg2: <span class="hljs-string">'命名还有讲究'</span></span></span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        fatherfunc(a, b) &#123;</span><br><span class="line"><span class="hljs-javascript">          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'fatherfunc 被调用'</span>+<span class="hljs-string">' '</span>+a+b)</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      components: &#123;</span><br><span class="line">        son: &#123;</span><br><span class="line"><span class="hljs-javascript">          template: <span class="hljs-string">'#son'</span>,</span></span><br><span class="line"><span class="hljs-javascript">          props: [<span class="hljs-string">'parentmsg'</span>, <span class="hljs-string">'tip'</span>],</span></span><br><span class="line">          methods: &#123;</span><br><span class="line">            myclick() &#123;</span><br><span class="line"><span class="hljs-javascript">              <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">'sonfunc'</span>, <span class="hljs-string">'第一个参数'</span>, <span class="hljs-string">'第二个参数'</span>)</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
         </div>
         
-        <div class="level is-size-7 is-uppercase">
+        
+        <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/vuejs/">vuejs</a>, <a class="has-link-grey -link" href="/tags/基础知识/">基础知识</a>
+                <a class="button is-size-7 is-light" href="/2019/08/15/我第一天学nodejs的笔记02/#more">阅读更多</a>
                 </div>
             </div>
         </div>
         
         
-        
-        <div class="social-share"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
-<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
-        
     </div>
 </div>
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.130Z">2019-08-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 274 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
+                <a class="has-link-black-ter" href="/2019/08/15/我第一天学nodejs的笔记01/">nodejs-核心模块之文件模块的初探</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里。<br>需要用require加载</p>
+<blockquote>
+<p>我认为这是node.js与浏览器中的JS的很重要的不同<br>正是这些模块让JS具备了服务端开发的能力</p>
+</blockquote>
+</blockquote>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/15/我第一天学nodejs的笔记01/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.124Z">2019-08-15</time>
                 
-<a class="button is-success donate">
-    <span class="icon is-small">
-        <i class="fab fa-weixin"></i>
-    </span>
-    <span>微信</span>
-    <div class="qrcode"><img src="/images/wechat.png" alt="微信"></div>
-</a>
-
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                </div>
                 
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 235 个字)
+                </span>
+                
+                
+            </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/15/我第一天学nodejs的笔记00/">nodejs-笔记（一）</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p><a href="http://nodejs.org" target="_blank" rel="noopener">node.js官网链接：http://nodejs.org</a><br>技术相关的网站大部分都以.org或.io结尾</p>
+</blockquote>
+<h2 id="1、node是什么？"><a href="#1、node是什么？" class="headerlink" title="1、node是什么？"></a>1、node是什么？</h2><ul>
+<li>node是基于chrome V8 JS引擎的运行环境</li>
+<li>可以解析和执行JS代码<blockquote>
+<p>以前只有浏览器可以<br>  现在用node之后可以脱离浏览器来运行JS</p>
+</blockquote></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/15/我第一天学nodejs的笔记00/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/vue-06-vue路由/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">vue-06-vue路由</span>
-            </a>
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.118Z">2019-08-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 391 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/15/我第三天学nodejs的笔记01/">nodejs-用express重写留言板</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>关于留言板的总体介绍在《留言板-demo》里<br>下面直接用express框架开写</p>
+</blockquote>
+<p>在写之前，为减少代码出错或者更改后服务器得重新重启，可以安装nodemon，这样每次文件有变动都会自动重启。<br>设置修改代码自动重启，这样不用每次都重启<br>安装一个第三方命令行工具</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global nodemon</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕后，使用</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nodemon app.js</span><br></pre></td></tr></table></figure>
+
+<p>即可</p>
         </div>
         
         
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/vue-04-vue动画/">
-                <span class="level-item">vue-04-vue动画</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/15/我第三天学nodejs的笔记01/#more">阅读更多</a>
+                </div>
+            </div>
         </div>
+        
         
     </div>
 </div>
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="title is-5 has-text-weight-normal">评论</h3>
-        
-<div id="valine-thread" class="content"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    new Valine({
-        el: '#valine-thread' ,
-        notify: false,
-        verify: false,
-        app_id: 'PjazMgPX9CMnvlK4VSYVC5Xe-MdYXbMMI',
-        app_key: 'nJAAmKuae6jFKEcohIC2gatr',
-        placeholder: '我想说...'
-    });
-</script>
 
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.111Z">2019-08-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 627 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/15/我第三天学nodejs的笔记00/">nodejs-模块系统、npm、package.json、Express</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="模块系统"><a href="#模块系统" class="headerlink" title="模块系统"></a>模块系统</h3><h4 id="模块分类"><a href="#模块分类" class="headerlink" title="模块分类"></a>模块分类</h4><ul>
+<li>核心模块<ul>
+<li>fs</li>
+<li>http</li>
+<li>url</li>
+<li>path</li>
+<li>os</li>
+<li>等等</li></ul></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/15/我第三天学nodejs的笔记00/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.104Z">2019-08-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 878 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/15/我第二天学nodejs的笔记02/">nodejs-留言板-demo</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>要点：<br>1、处理路由（对请求的处理）<br>2、对fs、http、art-template模块的运用</p>
+</blockquote>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1、新建一个目录，用npm对项目进行初始化"><a href="#1、新建一个目录，用npm对项目进行初始化" class="headerlink" title="1、新建一个目录，用npm对项目进行初始化"></a>1、新建一个目录，用npm对项目进行初始化</h3>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/15/我第二天学nodejs的笔记02/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.092Z">2019-08-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 259 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/15/我第二天学nodejs的笔记01/">nodejs-在node中使用模板引擎art-template渲染页面</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="web浏览器里的art-template是这样的"><a href="#web浏览器里的art-template是这样的" class="headerlink" title="web浏览器里的art-template是这样的"></a>web浏览器里的art-template是这样的</h3>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/15/我第二天学nodejs的笔记01/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.082Z">2019-08-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 277 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/15/我第二天学nodejs的笔记00/">nodejs-深入理解nodejs中的模块</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p><strong>引言</strong>：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载</p>
+</blockquote>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/08/15/我第二天学nodejs的笔记00/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
 </div>
                 
 
@@ -972,7 +1262,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="vue-05-vue组件" height="28">
+                    <img src="/images/logo.svg" alt="ysyのblog" height="28">
                 
                 </a>
                 <p class="is-size-7">

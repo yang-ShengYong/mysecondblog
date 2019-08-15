@@ -8,18 +8,19 @@
 
 
 
-    <meta name="description" content="vue-router 引包vue-router.js  12&amp;lt;script src=&quot;./lib/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
+    <meta name="description" content="vue-router 引包vue-router.js  12&amp;lt;script src=&quot;./lib/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
+<meta name="keywords" content="vuejs,基础知识">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-06-vue路由">
 <meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/vue-06-vue路由/index.html">
 <meta property="og:site_name" content="ysyのblog">
-<meta property="og:description" content="vue-router 引包vue-router.js  12&amp;lt;script src=&quot;./lib/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
+<meta property="og:description" content="vue-router 引包vue-router.js  12&amp;lt;script src=&quot;./lib/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-14T12:17:24.010Z">
+<meta property="og:updated_time" content="2019-08-15T08:29:39.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-06-vue路由">
-<meta name="twitter:description" content="vue-router 引包vue-router.js  12&amp;lt;script src=&quot;./lib/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
+<meta name="twitter:description" content="vue-router 引包vue-router.js  12&amp;lt;script src=&quot;./lib/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&amp;gt;&amp;lt;/script&amp;gt;">
 <meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
 
 
@@ -147,11 +148,15 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.048Z">2019-08-15</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/vuejs/">vuejs</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 668 个字)
+                    4 分钟 读完 (大约 669 个字)
                 </span>
                 
                 
@@ -169,10 +174,10 @@
             
         </h1>
         <div class="content">
-            <h4 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h4><blockquote>
+            <h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h3><blockquote>
 <p>引包vue-router.js</p>
 </blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./lib/vue.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"> <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/vue-router/dist/vue-router.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./lib/vue.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/vue-router/dist/vue-router.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
@@ -206,7 +211,9 @@
 
 <h4 id="watch-用来监听data中值的改变（优势在于可以监听非DOM元素的改变）"><a href="#watch-用来监听data中值的改变（优势在于可以监听非DOM元素的改变）" class="headerlink" title="watch 用来监听data中值的改变（优势在于可以监听非DOM元素的改变）"></a>watch 用来监听data中值的改变（优势在于可以监听非DOM元素的改变）</h4><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-javascript">	<span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span></span><br><span class="line">    el:</span><br><span class="line">    data: &#123;</span><br><span class="line">    	msg: 123</span><br><span class="line">    &#125;</span><br><span class="line">    methods:</span><br><span class="line">    filters:</span><br><span class="line">    direvtives:</span><br><span class="line">    router: </span><br><span class="line">    watch: &#123;</span><br><span class="line"><span class="hljs-javascript">    	msg: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newVal, oldVal</span>) </span>&#123;</span></span><br><span class="line"><span class="hljs-javascript">    		<span class="hljs-comment">//一旦msg变化就会触发这个方法，两个形参（改变后的值， 改变之前的值）</span></span></span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>eg: 监听路由改变</p>
+<blockquote>
+<p>比如: 监听路由改变</p>
+</blockquote>
 <figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-javascript">	<span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span></span><br><span class="line">    el:</span><br><span class="line">    data: &#123;</span><br><span class="line">    	msg: 123</span><br><span class="line">    &#125;</span><br><span class="line">    methods:</span><br><span class="line">    filters:</span><br><span class="line">    direvtives:</span><br><span class="line">    router: </span><br><span class="line">    watch: &#123;</span><br><span class="line"><span class="hljs-javascript">    	<span class="hljs-string">'$route.path'</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newVal, oldVal</span>) </span>&#123;</span></span><br><span class="line"><span class="hljs-javascript">    		<span class="hljs-keyword">if</span> (newVal === <span class="hljs-string">'/login'</span>) &#123;</span></span><br><span class="line"><span class="hljs-javascript">          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'欢迎进入登录页面'</span>)</span></span><br><span class="line">        &#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="computed计算属性"><a href="#computed计算属性" class="headerlink" title="computed计算属性"></a>computed计算属性</h4><ul>
@@ -222,6 +229,15 @@
 <li>watch 键是需要观察的东西，值是键改变之后的回调函数，用于监听特定的数据变化，仿佛是computed和methods的结合</li>
 </ul>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/vuejs/">vuejs</a>, <a class="has-link-grey -link" href="/tags/基础知识/">基础知识</a>
+                </div>
+            </div>
         </div>
         
         
@@ -342,7 +358,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        21
+                        20
                     </p>
                 </div>
             </div>
@@ -352,7 +368,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        6
                     </p>
                 </div>
             </div>
@@ -362,7 +378,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        9
                     </p>
                 </div>
             </div>
@@ -460,9 +476,49 @@
             </h3>
             <ul class="menu-list">
             <li>
+        <a class="level is-marginless" href="/categories/nodejs/">
+            <span class="level-start">
+                <span class="level-item">nodejs</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/vuejs/">
+            <span class="level-start">
+                <span class="level-item">vuejs</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/webpack/">
+            <span class="level-start">
+                <span class="level-item">webpack</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/教学/">
             <span class="level-start">
                 <span class="level-item">教学</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/数据结构/">
+            <span class="level-start">
+                <span class="level-item">数据结构</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/正则表达式/">
+            <span class="level-start">
+                <span class="level-item">正则表达式</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -479,7 +535,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+        <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/nodejs/" style="font-size: 17.5px;">nodejs</a> <a href="/tags/vuejs/" style="font-size: 15px;">vuejs</a> <a href="/tags/webpack/" style="font-size: 12.5px;">webpack</a> <a href="/tags/基础知识/" style="font-size: 20px;">基础知识</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/栈/" style="font-size: 10px;">栈</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a>
     </div>
 </div>
 
@@ -507,7 +563,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.151Z">2019-08-15</time></div>
                     <a href="/2019/08/15/正则表达式有多重要/" class="title has-link-black-ter is-size-6 has-text-weight-normal">正则表达式</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/正则表达式/">正则表达式</a>
                     </p>
                 </div>
             </div>
@@ -526,7 +582,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.143Z">2019-08-15</time></div>
                     <a href="/2019/08/15/用JS实现栈/" class="title has-link-black-ter is-size-6 has-text-weight-normal">创建Stack类的不同方法</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/数据结构/">数据结构</a>
                     </p>
                 </div>
             </div>
@@ -545,7 +601,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.137Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记02/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-用node轻松构建一个web服务器（http模块）</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -564,7 +620,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.130Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-核心模块之文件模块的初探</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -583,7 +639,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.124Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记00/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-笔记（一）</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -607,7 +663,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">21</span>
+                    <span class="level-item tag">20</span>
                 </span>
             </a>
         </li>
@@ -635,6 +691,55 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/hexo/">
                         <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/nodejs/">
+                        <span class="tag">nodejs</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/vuejs/">
+                        <span class="tag">vuejs</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/webpack/">
+                        <span class="tag">webpack</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/基础知识/">
+                        <span class="tag">基础知识</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数据结构/">
+                        <span class="tag">数据结构</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/栈/">
+                        <span class="tag">栈</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/正则表达式/">
+                        <span class="tag">正则表达式</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -675,7 +780,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.151Z">2019-08-15</time></div>
                     <a href="/2019/08/15/正则表达式有多重要/" class="title has-link-black-ter is-size-6 has-text-weight-normal">正则表达式</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/正则表达式/">正则表达式</a>
                     </p>
                 </div>
             </div>
@@ -694,7 +799,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.143Z">2019-08-15</time></div>
                     <a href="/2019/08/15/用JS实现栈/" class="title has-link-black-ter is-size-6 has-text-weight-normal">创建Stack类的不同方法</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/数据结构/">数据结构</a>
                     </p>
                 </div>
             </div>
@@ -713,7 +818,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.137Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记02/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-用node轻松构建一个web服务器（http模块）</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -732,7 +837,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.130Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-核心模块之文件模块的初探</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -751,7 +856,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.124Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记00/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-笔记（一）</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -775,7 +880,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">21</span>
+                    <span class="level-item tag">20</span>
                 </span>
             </a>
         </li>
@@ -803,6 +908,55 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/hexo/">
                         <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/nodejs/">
+                        <span class="tag">nodejs</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/vuejs/">
+                        <span class="tag">vuejs</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/webpack/">
+                        <span class="tag">webpack</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/基础知识/">
+                        <span class="tag">基础知识</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数据结构/">
+                        <span class="tag">数据结构</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/栈/">
+                        <span class="tag">栈</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/正则表达式/">
+                        <span class="tag">正则表达式</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>

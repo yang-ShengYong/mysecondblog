@@ -9,6 +9,7 @@
 
 
     <meta name="description" content="与fs文件模块一样，http模块也是nodejs核心模块中的一个当学到这儿的时候我突然真正体会到了模块化编程究竟是什么样的过程">
+<meta name="keywords" content="nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodejs-用node轻松构建一个web服务器（http模块）">
 <meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/我第一天学nodejs的笔记02/index.html">
@@ -16,7 +17,7 @@
 <meta property="og:description" content="与fs文件模块一样，http模块也是nodejs核心模块中的一个当学到这儿的时候我突然真正体会到了模块化编程究竟是什么样的过程">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-06T06:27:32.522Z">
+<meta property="og:updated_time" content="2019-08-15T08:27:44.166Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs-用node轻松构建一个web服务器（http模块）">
 <meta name="twitter:description" content="与fs文件模块一样，http模块也是nodejs核心模块中的一个当学到这儿的时候我突然真正体会到了模块化编程究竟是什么样的过程">
@@ -147,6 +148,10 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.137Z">2019-08-15</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
@@ -191,6 +196,15 @@
 <h3 id="为什么？"><a href="#为什么？" class="headerlink" title="为什么？"></a>为什么？</h3><p>  服务器发送的数据其实是utf-8编码的内容。<br>  但浏览器不知道是什么编码方式，所以它只会按照操作系统默认的方式解码。<br>  因此，服务器得告诉浏览器，我的内容是个文本（text）,你按照plain的格式来解析，字符按照utf-8编码方式解析</p>
 <h3 id="Content-Type有哪些？"><a href="#Content-Type有哪些？" class="headerlink" title="Content-Type有哪些？"></a>Content-Type有哪些？</h3><p>  不同的资源对应的Content-Type是不一样的。<br>  可以在<a href="http://tool.oschina.net/commons" target="_blank" rel="noopener">常用对照表</a>参考<br>  图片不需要指定编码。<br>  一般只为字符数据指定编码（没有字符的话;charset=utf-8可以不写）</p>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/nodejs/">nodejs</a>
+                </div>
+            </div>
         </div>
         
         
@@ -311,7 +325,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        21
+                        20
                     </p>
                 </div>
             </div>
@@ -321,7 +335,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        6
                     </p>
                 </div>
             </div>
@@ -331,7 +345,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        9
                     </p>
                 </div>
             </div>
@@ -429,9 +443,49 @@
             </h3>
             <ul class="menu-list">
             <li>
+        <a class="level is-marginless" href="/categories/nodejs/">
+            <span class="level-start">
+                <span class="level-item">nodejs</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">8</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/vuejs/">
+            <span class="level-start">
+                <span class="level-item">vuejs</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/webpack/">
+            <span class="level-start">
+                <span class="level-item">webpack</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/教学/">
             <span class="level-start">
                 <span class="level-item">教学</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/数据结构/">
+            <span class="level-start">
+                <span class="level-item">数据结构</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/正则表达式/">
+            <span class="level-start">
+                <span class="level-item">正则表达式</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -448,7 +502,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+        <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/nodejs/" style="font-size: 17.5px;">nodejs</a> <a href="/tags/vuejs/" style="font-size: 15px;">vuejs</a> <a href="/tags/webpack/" style="font-size: 12.5px;">webpack</a> <a href="/tags/基础知识/" style="font-size: 20px;">基础知识</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/栈/" style="font-size: 10px;">栈</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a>
     </div>
 </div>
 
@@ -476,7 +530,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.151Z">2019-08-15</time></div>
                     <a href="/2019/08/15/正则表达式有多重要/" class="title has-link-black-ter is-size-6 has-text-weight-normal">正则表达式</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/正则表达式/">正则表达式</a>
                     </p>
                 </div>
             </div>
@@ -495,7 +549,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.143Z">2019-08-15</time></div>
                     <a href="/2019/08/15/用JS实现栈/" class="title has-link-black-ter is-size-6 has-text-weight-normal">创建Stack类的不同方法</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/数据结构/">数据结构</a>
                     </p>
                 </div>
             </div>
@@ -514,7 +568,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.137Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记02/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-用node轻松构建一个web服务器（http模块）</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -533,7 +587,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.130Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-核心模块之文件模块的初探</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -552,7 +606,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.124Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记00/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-笔记（一）</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -576,7 +630,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">21</span>
+                    <span class="level-item tag">20</span>
                 </span>
             </a>
         </li>
@@ -604,6 +658,55 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/hexo/">
                         <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/nodejs/">
+                        <span class="tag">nodejs</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/vuejs/">
+                        <span class="tag">vuejs</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/webpack/">
+                        <span class="tag">webpack</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/基础知识/">
+                        <span class="tag">基础知识</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数据结构/">
+                        <span class="tag">数据结构</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/栈/">
+                        <span class="tag">栈</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/正则表达式/">
+                        <span class="tag">正则表达式</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -644,7 +747,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.151Z">2019-08-15</time></div>
                     <a href="/2019/08/15/正则表达式有多重要/" class="title has-link-black-ter is-size-6 has-text-weight-normal">正则表达式</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/正则表达式/">正则表达式</a>
                     </p>
                 </div>
             </div>
@@ -663,7 +766,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.143Z">2019-08-15</time></div>
                     <a href="/2019/08/15/用JS实现栈/" class="title has-link-black-ter is-size-6 has-text-weight-normal">创建Stack类的不同方法</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/数据结构/">数据结构</a>
                     </p>
                 </div>
             </div>
@@ -682,7 +785,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.137Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记02/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-用node轻松构建一个web服务器（http模块）</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -701,7 +804,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.130Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记01/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-核心模块之文件模块的初探</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -720,7 +823,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-15T07:35:19.124Z">2019-08-15</time></div>
                     <a href="/2019/08/15/我第一天学nodejs的笔记00/" class="title has-link-black-ter is-size-6 has-text-weight-normal">nodejs-笔记（一）</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
                     </p>
                 </div>
             </div>
@@ -744,7 +847,7 @@
                     <span class="level-item">八月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">21</span>
+                    <span class="level-item tag">20</span>
                 </span>
             </a>
         </li>
@@ -772,6 +875,55 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/hexo/">
                         <span class="tag">hexo</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/nodejs/">
+                        <span class="tag">nodejs</span>
+                        <span class="tag is-grey">8</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/vuejs/">
+                        <span class="tag">vuejs</span>
+                        <span class="tag is-grey">6</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/webpack/">
+                        <span class="tag">webpack</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/基础知识/">
+                        <span class="tag">基础知识</span>
+                        <span class="tag is-grey">9</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/数据结构/">
+                        <span class="tag">数据结构</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/栈/">
+                        <span class="tag">栈</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/正则表达式/">
+                        <span class="tag">正则表达式</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
