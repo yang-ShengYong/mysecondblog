@@ -3,20 +3,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>分类 - ysyのblog</title>
+<title>webpack-03-webpack与vue的结合 - ysyのblog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="hello world,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ysyのblog">
-<meta property="og:url" content="https://yang-shengyong.github.io/categories/index.html">
+    <meta name="description" content="使用vue实例的render方法渲染组件123456789101112131415var vm = new Vue(&amp;#123;      el: &apos;#app&apos;,      data: &amp;#123;              &amp;#125;,      methods: &amp;#123;              &amp;#125;,      components: &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack-03-webpack与vue的结合">
+<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/webpack-03-与vue的结合/index.html">
 <meta property="og:site_name" content="ysyのblog">
+<meta property="og:description" content="使用vue实例的render方法渲染组件123456789101112131415var vm = new Vue(&amp;#123;      el: &apos;#app&apos;,      data: &amp;#123;              &amp;#125;,      methods: &amp;#123;              &amp;#125;,      components: &amp;#123;">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-07-18T05:21:05.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ysyのblog">
+<meta name="twitter:title" content="webpack-03-webpack与vue的结合">
+<meta name="twitter:description" content="使用vue实例的render方法渲染组件123456789101112131415var vm = new Vue(&amp;#123;      el: &apos;#app&apos;,      data: &amp;#123;              &amp;#125;,      methods: &amp;#123;              &amp;#125;,      components: &amp;#123;">
 <meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
 
 
@@ -91,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                <img src="/images/logo.svg" alt="webpack-03-webpack与vue的结合" height="28">
             
             </a>
         </div>
@@ -103,7 +106,7 @@
                 
                 <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active" href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
                 <a class="navbar-item" href="/tags">Tags</a>
                 
@@ -136,27 +139,146 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.069Z">2019-08-15</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 333 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                webpack-03-webpack与vue的结合
+            
+        </h1>
+        <div class="content">
+            <h4 id="使用vue实例的render方法渲染组件"><a href="#使用vue实例的render方法渲染组件" class="headerlink" title="使用vue实例的render方法渲染组件"></a>使用vue实例的render方法渲染组件</h4><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span><br><span class="line">      el: <span class="hljs-string">'#app'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        </span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        </span><br><span class="line">      &#125;,</span><br><span class="line">      components: &#123;</span><br><span class="line">        </span><br><span class="line">      &#125;,</span><br><span class="line">      render: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">createElements</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> createElements(login)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p><strong><div id="app"></div></strong>会被login完全覆盖（有点类似于v-text）</p>
+<h4 id="区分webpack中导入vue和普通网页中引入vue-js的区别"><a href="#区分webpack中导入vue和普通网页中引入vue-js的区别" class="headerlink" title="区分webpack中导入vue和普通网页中引入vue.js的区别"></a>区分webpack中导入vue和普通网页中引入vue.js的区别</h4><p>import Vue from ‘vue’ 会带来如下操作：</p>
+<p>先去node_modules文件夹中找vue模块</p>
+<p>然后去package.json中找vue模块的main属性，但main指向的时vue-runtime-only.js</p>
+<p>这样不行，我们要的是vue.js</p>
+<p>所以可以这么做：</p>
+<p>1、更改main的值为vue.js或vue.min.js</p>
+<p>2、import Vue from ‘../node_modules/vue/dist/vue.js’</p>
+<p>3、配置webpack.config.js文件</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">module</span>.exports = &#123;</span><br><span class="line">  resolve: &#123;</span><br><span class="line">    alias: &#123;</span><br><span class="line">      <span class="hljs-string">'vue$'</span>: <span class="hljs-string">'vue/dist/vue.esm.js'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用export-default和export向外暴露成员"><a href="#使用export-default和export向外暴露成员" class="headerlink" title="使用export default和export向外暴露成员"></a>使用export default和export向外暴露成员</h4><p><strong>export default</strong> 只能有一个 </p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;</span><br><span class="line">  name: <span class="hljs-string">'zhangsan'</span>,</span><br><span class="line">  age: <span class="hljs-number">20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以自定义变量名称接收接收</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> person <span class="hljs-keyword">from</span> <span class="hljs-string">'./person.js'</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>export</strong> 可以写多个</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">var</span> name = <span class="hljs-string">'lisi'</span></span><br><span class="line"><span class="hljs-keyword">export</span> <span class="hljs-keyword">var</span> age = <span class="hljs-number">21</span></span><br></pre></td></tr></table></figure>
+
+<p>必须使用{原名, 原名}接收但也可以用<strong>as</strong>改名</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> &#123; name, age <span class="hljs-keyword">as</span> myCallAge &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">'./person.js'</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="webpack使用vue-router"><a href="#webpack使用vue-router" class="headerlink" title="webpack使用vue-router"></a>webpack使用vue-router</h4><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> VueRouter <span class="hljs-keyword">from</span> <span class="hljs-string">'vue-router'</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br></pre></td></tr></table></figure>
+
+<h4 id="组件中style标签的lang属性和scoped属性"><a href="#组件中style标签的lang属性和scoped属性" class="headerlink" title="组件中style标签的lang属性和scoped属性"></a>组件中style标签的lang属性和scoped属性</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">  body &#123;</span><br><span class="line">    div &#123;</span><br><span class="line">      font-size: italic;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">//lang设置用css、scss、less等哪种语言写</span><br><span class="line">//scoped设置样式是组件的，如果不设置就会变成全局的</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/教学/">
-            <span class="level-start">
-                <span class="level-item">教学</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/我的第一篇文章/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">我的第一篇博客</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/webpack-02-自动打包和插件、Babel/">
+                <span class="level-item">webpack-02-自动打包、插件、Babel等怎么搞</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'PjazMgPX9CMnvlK4VSYVC5Xe-MdYXbMMI',
+        app_key: 'nJAAmKuae6jFKEcohIC2gatr',
+        placeholder: '我想说...'
+    });
+</script>
+
+    </div>
+</div>
+</div>
                 
 
 
@@ -682,7 +804,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                    <img src="/images/logo.svg" alt="webpack-03-webpack与vue的结合" height="28">
                 
                 </a>
                 <p class="is-size-7">

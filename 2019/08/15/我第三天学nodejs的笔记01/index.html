@@ -3,20 +3,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>分类 - ysyのblog</title>
+<title>nodejs-用express重写留言板 - ysyのblog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="hello world,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ysyのblog">
-<meta property="og:url" content="https://yang-shengyong.github.io/categories/index.html">
+    <meta name="description" content="关于留言板的总体介绍在《留言板-demo》里下面直接用express框架开写  在写之前，为减少代码出错或者更改后服务器得重新重启，可以安装nodemon，这样每次文件有变动都会自动重启。设置修改代码自动重启，这样不用每次都重启安装一个第三方命令行工具 1npm install --global nodemon  安装完毕后，使用 1nodemon app.js  即可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs-用express重写留言板">
+<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/我第三天学nodejs的笔记01/index.html">
 <meta property="og:site_name" content="ysyのblog">
+<meta property="og:description" content="关于留言板的总体介绍在《留言板-demo》里下面直接用express框架开写  在写之前，为减少代码出错或者更改后服务器得重新重启，可以安装nodemon，这样每次文件有变动都会自动重启。设置修改代码自动重启，这样不用每次都重启安装一个第三方命令行工具 1npm install --global nodemon  安装完毕后，使用 1nodemon app.js  即可">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-07-06T06:26:53.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ysyのblog">
+<meta name="twitter:title" content="nodejs-用express重写留言板">
+<meta name="twitter:description" content="关于留言板的总体介绍在《留言板-demo》里下面直接用express框架开写  在写之前，为减少代码出错或者更改后服务器得重新重启，可以安装nodemon，这样每次文件有变动都会自动重启。设置修改代码自动重启，这样不用每次都重启安装一个第三方命令行工具 1npm install --global nodemon  安装完毕后，使用 1nodemon app.js  即可">
 <meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
 
 
@@ -91,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                <img src="/images/logo.svg" alt="nodejs-用express重写留言板" height="28">
             
             </a>
         </div>
@@ -103,7 +106,7 @@
                 
                 <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active" href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
                 <a class="navbar-item" href="/tags">Tags</a>
                 
@@ -136,27 +139,137 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.118Z">2019-08-15</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 391 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                nodejs-用express重写留言板
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>关于留言板的总体介绍在《留言板-demo》里<br>下面直接用express框架开写</p>
+</blockquote>
+<p>在写之前，为减少代码出错或者更改后服务器得重新重启，可以安装nodemon，这样每次文件有变动都会自动重启。<br>设置修改代码自动重启，这样不用每次都重启<br>安装一个第三方命令行工具</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global nodemon</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕后，使用</p>
+<figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nodemon app.js</span><br></pre></td></tr></table></figure>
+
+<p>即可</p>
+<a id="more"></a>
+<h4 id="1、安装express模块和art-template"><a href="#1、安装express模块和art-template" class="headerlink" title="1、安装express模块和art-template"></a>1、安装express模块和art-template</h4><figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -S express art-template express-art-template</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、引入express模块"><a href="#2、引入express模块" class="headerlink" title="2、引入express模块"></a>2、引入express模块</h4><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> app = express()</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、配置使用模板引擎"><a href="#3、配置使用模板引擎" class="headerlink" title="3、配置使用模板引擎"></a>3、配置使用模板引擎</h4><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="hljs-string">'html'</span>, <span class="hljs-built_in">require</span>(<span class="hljs-string">'express-art-template'</span>))</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//评论数据</span></span><br><span class="line"><span class="hljs-keyword">var</span> comments =[]</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、写路由（中间件）"><a href="#4、写路由（中间件）" class="headerlink" title="4、写路由（中间件）"></a>4、写路由（中间件）</h4><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//开放/public/,这样直接就把样式库开放了</span></span><br><span class="line">app.use(<span class="hljs-string">'/public/'</span>, express.static(<span class="hljs-string">'./public/'</span>))</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//请求/，返回index.html</span></span><br><span class="line">app.get(<span class="hljs-string">'/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="hljs-string">'index.html'</span>, &#123;</span><br><span class="line">    comments: comments</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-comment">//请求/post,返回post.html</span></span><br><span class="line">app.get(<span class="hljs-string">'/post'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="hljs-string">'post.html'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-comment">//写完评论后请求/pinglun,将评论添加到comments里，然后重定向到主页面</span></span><br><span class="line">app.get(<span class="hljs-string">'/pinglun'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> comment = req.query</span><br><span class="line">  <span class="hljs-comment">//添加评论时间</span></span><br><span class="line">  <span class="hljs-keyword">var</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()</span><br><span class="line">  comment.dateTime = date.getFullYear() + <span class="hljs-string">'-'</span> + (date.getMonth() + <span class="hljs-number">1</span>) +</span><br><span class="line">    <span class="hljs-string">'-'</span> + date.getDate() + <span class="hljs-string">' '</span> + date.getHours() +</span><br><span class="line">    <span class="hljs-string">':'</span> + date.getMinutes() + <span class="hljs-string">':'</span> + date.getSeconds()</span><br><span class="line">  comments.unshift(comment)</span><br><span class="line">  <span class="hljs-comment">//设置重定向</span></span><br><span class="line">  <span class="hljs-comment">// res.statusCode = 302</span></span><br><span class="line">  <span class="hljs-comment">// res.setHeader('Location', '/')</span></span><br><span class="line">  <span class="hljs-comment">// res.send()</span></span><br><span class="line">  res.redirect(<span class="hljs-string">'/'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、打开监听，启动服务"><a href="#5、打开监听，启动服务" class="headerlink" title="5、打开监听，启动服务"></a>5、打开监听，启动服务</h4><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.listen(<span class="hljs-number">3000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'running...'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>下篇：结合mongodb的一个多人社区的案例（之前学的时候老师只讲了一部分，我会把案例做完整之后整理下来）</p>
+
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/教学/">
-            <span class="level-start">
-                <span class="level-item">教学</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/我第一天学nodejs的笔记00/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">nodejs-笔记（一）</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/我第三天学nodejs的笔记00/">
+                <span class="level-item">nodejs-模块系统、npm、package.json、Express</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'PjazMgPX9CMnvlK4VSYVC5Xe-MdYXbMMI',
+        app_key: 'nJAAmKuae6jFKEcohIC2gatr',
+        placeholder: '我想说...'
+    });
+</script>
+
+    </div>
+</div>
+</div>
                 
 
 
@@ -682,7 +795,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                    <img src="/images/logo.svg" alt="nodejs-用express重写留言板" height="28">
                 
                 </a>
                 <p class="is-size-7">

@@ -3,20 +3,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>分类 - ysyのblog</title>
+<title>nodejs-深入理解nodejs中的模块 - ysyのblog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="hello world,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ysyのblog">
-<meta property="og:url" content="https://yang-shengyong.github.io/categories/index.html">
+    <meta name="description" content="引言：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs-深入理解nodejs中的模块">
+<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/我第二天学nodejs的笔记00/index.html">
 <meta property="og:site_name" content="ysyのblog">
+<meta property="og:description" content="引言：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-07-06T06:26:09.448Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ysyのblog">
+<meta name="twitter:title" content="nodejs-深入理解nodejs中的模块">
+<meta name="twitter:description" content="引言：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载">
 <meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
 
 
@@ -91,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                <img src="/images/logo.svg" alt="nodejs-深入理解nodejs中的模块" height="28">
             
             </a>
         </div>
@@ -103,7 +106,7 @@
                 
                 <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active" href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
                 <a class="navbar-item" href="/tags">Tags</a>
                 
@@ -136,27 +139,146 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.082Z">2019-08-15</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 277 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                nodejs-深入理解nodejs中的模块
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p><strong>引言</strong>：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="1、node模块有三种"><a href="#1、node模块有三种" class="headerlink" title="1、node模块有三种"></a>1、node模块有三种</h3><ul>
+<li><p>具名的核心模块</p>
+<ul>
+<li>fs</li>
+<li>http</li>
+<li>os</li>
+<li>……</li>
+</ul>
+</li>
+<li><p>用户自己编写的模块</p>
+<ul>
+<li>相对路径必须加 ./ ，不能省略，否则就把它当成核心模块了</li>
+<li>可以省略后缀名<h3 id="2、node中没有全局作用域"><a href="#2、node中没有全局作用域" class="headerlink" title="2、node中没有全局作用域"></a>2、node中没有全局作用域</h3></li>
+</ul>
+</li>
+<li><p>内部访问不到外部</p>
+</li>
+<li><p>外部访问不到内部</p>
+<h3 id="3、如何让模块与模块之间通信呢？"><a href="#3、如何让模块与模块之间通信呢？" class="headerlink" title="3、如何让模块与模块之间通信呢？"></a>3、如何让模块与模块之间通信呢？</h3></li>
+<li><p>exports</p>
+</li>
+<li><p>module.exports<br>在一个模块中，node会隐式地</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = &#123;</span><br><span class="line">  exports = &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-keyword">var</span> exports = <span class="hljs-built_in">module</span>.exports</span><br><span class="line"><span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports</span><br></pre></td></tr></table></figure>
+
+<p>由此可见，exports和module.exports是用来导出模块中想要对外展示的成员，所以我们可以把要对外展示的成员这么写：</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//导出一个成员</span></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = 成员</span><br><span class="line"><span class="hljs-comment">//这样可以在别的模块require之后就用</span></span><br><span class="line"><span class="hljs-comment">//或者</span></span><br><span class="line">exports.成员名 = 成员</span><br><span class="line"><span class="hljs-comment">//这样在别的模块require之后，还得.成员名之后再用</span></span><br><span class="line"><span class="hljs-comment">//导出多个成员</span></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="hljs-comment">//里面写成员</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/教学/">
-            <span class="level-start">
-                <span class="level-item">教学</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/我第二天学nodejs的笔记01/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">nodejs-在node中使用模板引擎art-template渲染页面</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/我的第一篇文章/">
+                <span class="level-item">我的第一篇博客</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'PjazMgPX9CMnvlK4VSYVC5Xe-MdYXbMMI',
+        app_key: 'nJAAmKuae6jFKEcohIC2gatr',
+        placeholder: '我想说...'
+    });
+</script>
+
+    </div>
+</div>
+</div>
                 
 
 
@@ -682,7 +804,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                    <img src="/images/logo.svg" alt="nodejs-深入理解nodejs中的模块" height="28">
                 
                 </a>
                 <p class="is-size-7">

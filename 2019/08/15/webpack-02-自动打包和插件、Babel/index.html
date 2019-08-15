@@ -3,20 +3,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>分类 - ysyのblog</title>
+<title>webpack-02-自动打包、插件、Babel等怎么搞 - ysyのblog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="hello world,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ysyのblog">
-<meta property="og:url" content="https://yang-shengyong.github.io/categories/index.html">
+    <meta name="description" content="每次修改代码自动打包编译 使用webpack-dev-server工具实现自动打包编译安装webpack-dev-server到本地依赖 1npm i webpack-dev-server@2 -D   一定要注意版本问题，我亲测 webpack版本别太高，webpack-dev-server别比webpack还高">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack-02-自动打包、插件、Babel等怎么搞">
+<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/webpack-02-自动打包和插件、Babel/index.html">
 <meta property="og:site_name" content="ysyのblog">
+<meta property="og:description" content="每次修改代码自动打包编译 使用webpack-dev-server工具实现自动打包编译安装webpack-dev-server到本地依赖 1npm i webpack-dev-server@2 -D   一定要注意版本问题，我亲测 webpack版本别太高，webpack-dev-server别比webpack还高">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-07-16T10:06:25.178Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ysyのblog">
+<meta name="twitter:title" content="webpack-02-自动打包、插件、Babel等怎么搞">
+<meta name="twitter:description" content="每次修改代码自动打包编译 使用webpack-dev-server工具实现自动打包编译安装webpack-dev-server到本地依赖 1npm i webpack-dev-server@2 -D   一定要注意版本问题，我亲测 webpack版本别太高，webpack-dev-server别比webpack还高">
 <meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
 
 
@@ -91,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                <img src="/images/logo.svg" alt="webpack-02-自动打包、插件、Babel等怎么搞" height="28">
             
             </a>
         </div>
@@ -103,7 +106,7 @@
                 
                 <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active" href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
                 <a class="navbar-item" href="/tags">Tags</a>
                 
@@ -136,27 +139,204 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.062Z">2019-08-15</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 869 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                webpack-02-自动打包、插件、Babel等怎么搞
+            
+        </h1>
+        <div class="content">
+            <p>每次修改代码自动打包编译</p>
+<h4 id="使用webpack-dev-server工具实现自动打包编译"><a href="#使用webpack-dev-server工具实现自动打包编译" class="headerlink" title="使用webpack-dev-server工具实现自动打包编译"></a>使用webpack-dev-server工具实现自动打包编译</h4><p>安装webpack-dev-server到本地依赖</p>
+<figure class="highlight powershell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i webpack-dev-server@<span class="hljs-number">2</span> -D</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>一定要注意版本问题，我亲测</p>
+<p>webpack版本别太高，webpack-dev-server别比webpack还高</p>
+</blockquote>
+<a id="more"></a>
+
+<p>webpack-dev-server帮我们打包生成的bundle.js文件，没有存放在物理磁盘中</p>
+<p>而是在内存中放在了项目根目录，所以在实际磁盘中查不到。</p>
+<p>这样每次编译时速度快，减少磁盘消耗</p>
+<h4 id="webpack-dev-server的常用命令"><a href="#webpack-dev-server的常用命令" class="headerlink" title="webpack-dev-server的常用命令"></a>webpack-dev-server的常用命令</h4><p>想打包完成后</p>
+<p>​    自动打开浏览器 –open</p>
+<p>​    自定义端口 –port 3000</p>
+<p>​    自定义展示目录 –contentBase src</p>
+<p>​    不重新编译，而是给bundle.js打补丁 –hot</p>
+<p>第一种方法：</p>
+<figure class="highlight powershell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack-dev-server --open --port <span class="hljs-number">3000</span> --contentBase src --hot</span><br></pre></td></tr></table></figure>
+
+<p>第二种方法：</p>
+<p>在webpack.config.js中</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>)</span><br><span class="line"><span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">'webpack'</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: path.join(__dirname, <span class="hljs-string">'./src/main.js'</span>),</span><br><span class="line">  output: &#123;</span><br><span class="line">    path: path.join(__dirname, <span class="hljs-string">'./dist'</span>),</span><br><span class="line">    filename: <span class="hljs-string">'bundle.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    open: <span class="hljs-literal">true</span>,</span><br><span class="line">    port: <span class="hljs-number">3000</span>,</span><br><span class="line">    contentBase: <span class="hljs-string">'src'</span>,</span><br><span class="line">    hot: <span class="hljs-literal">true</span> <span class="hljs-comment">//想要hot生效，必须先配置下面的plugins</span></span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="hljs-keyword">new</span> webpack.HotModuleReplacementPlugin()</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="html-webpack-plugin插件作用："><a href="#html-webpack-plugin插件作用：" class="headerlink" title="html-webpack-plugin插件作用："></a>html-webpack-plugin插件作用：</h5><ul>
+<li>自动在内存中根据指定页面生成内存的页面</li>
+<li>把打包好的bundle.js追加到页面中去</li>
+</ul>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> htmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'html-webpack-plugin'</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: path.join(__dirname, <span class="hljs-string">'./src/main.js'</span>),</span><br><span class="line">  output: &#123;</span><br><span class="line">    path: path.join(__dirname, <span class="hljs-string">'./dist'</span>),</span><br><span class="line">    filename: <span class="hljs-string">'bundle.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    open: <span class="hljs-literal">true</span>,</span><br><span class="line">    port: <span class="hljs-number">3000</span>,</span><br><span class="line">    contentBase: <span class="hljs-string">'src'</span>,</span><br><span class="line">    hot: <span class="hljs-literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="hljs-keyword">new</span> webpack.HotModuleReplacementPlugin(),</span><br><span class="line">    <span class="hljs-keyword">new</span> htmlWebpackPlugin(&#123;</span><br><span class="line">      template: path.join(__dirname, <span class="hljs-string">'./src/index.html'</span>), <span class="hljs-comment">//模板在哪儿</span></span><br><span class="line">      filename: <span class="hljs-string">'index.html'</span> <span class="hljs-comment">//在内存中叫啥名</span></span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="webpack默认只能打包js文件，如要处理css或其他类型文件"><a href="#webpack默认只能打包js文件，如要处理css或其他类型文件" class="headerlink" title="webpack默认只能打包js文件，如要处理css或其他类型文件"></a>webpack默认只能打包js文件，如要处理css或其他类型文件</h4><ul>
+<li><p>先在main.js中引入</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> <span class="hljs-string">'./css/index.css'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装style-loader css-loader包</p>
+</li>
+<li><p>在webpack配置中有个module属性</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="hljs-built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;<span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>, <span class="hljs-attr">use</span>: [<span class="hljs-string">'style-loader'</span>, <span class="hljs-string">'css-loader'</span>]&#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="webpack处理文件的过程"><a href="#webpack处理文件的过程" class="headerlink" title="webpack处理文件的过程"></a>webpack处理文件的过程</h5><ul>
+<li>判断是否是js文件？是，直接打包；不是，查找对应的第三方loader（在use里找，从后往前找）</li>
+</ul>
+</li>
+<li><p>默认webpack无法处理CSS中的url</p>
+<blockquote>
+<p>url-loader内部依赖file-loader</p>
+</blockquote>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i url-loader file-loader -D</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(jpg|png|gif|jpeg)$/</span>, <span class="hljs-attr">use</span>: <span class="hljs-string">'url-loader'</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>配置完后webpack对图片的操作是将图片用base64编码，直接跟页面一起请求，避免二次请求</p>
+<p>我们要求小图片才这样处理，大图片正常加载</p>
+<p>于是乎设置了limit参数</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(jpg|png|gif|jpeg)$/</span>, <span class="hljs-attr">use</span>: <span class="hljs-string">'url-loader?limit=12470'</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>我测试的是图片大小等于12470时仍然是base64编码</p>
+<p>如果图片大小超出limit，图片名称就会变为   32位哈希值.扩展名</p>
+<p>但我们还是可以改成我们原来的名称</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(jpg|png|gif|jpeg)$/</span>, <span class="hljs-attr">use</span>: <span class="hljs-string">'url-loader?limit=12470&amp;name=[name].[ext]'</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>但会出现问题：如果两张名称一样的图片在两个文件夹中都被引入，就会出现覆盖。因此，</p>
+<p>在前面添加哈希值保证唯一名称</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(jpg|png|gif|jpeg)$/</span>, <span class="hljs-attr">use</span>: <span class="hljs-string">'url-loader?limit=12470&amp;name=[hash:8]-[name].[ext]'</span> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>url-loader也可处理字体文件</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(ttf|eot|svg|woff|woff2)$/</span>, <span class="hljs-attr">use</span>: <span class="hljs-string">'url-loader'</span> &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="webpack用babel处理高级语法"><a href="#webpack用babel处理高级语法" class="headerlink" title="webpack用babel处理高级语法"></a>webpack用babel处理高级语法</h4><ul>
+<li>加载用于语法转换的插件</li>
+</ul>
+<figure class="highlight powershell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i babel-core babel-loader babel-plugin-transform-runtime -D</span><br></pre></td></tr></table></figure>
+
+<p>​        加载语法转换的规则</p>
+<figure class="highlight powershell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i babel-preset-env babel-preset-stage-<span class="hljs-number">0</span> -D</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在webpack.config.js中配置</li>
+</ul>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>, <span class="hljs-attr">use</span>: <span class="hljs-string">'babel-loader'</span>, <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span> &#125;</span><br><span class="line"><span class="hljs-comment">//exclude表示用不着转换node_module中的代码</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在项目根目录建立.babelrc文件（json格式）</li>
+</ul>
+<figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="hljs-attr">"presets"</span>: [<span class="hljs-string">"env"</span>, <span class="hljs-string">"stage-0"</span>],</span><br><span class="line">  <span class="hljs-attr">"plugins"</span>: [<span class="hljs-string">"transform-runtime"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/教学/">
-            <span class="level-start">
-                <span class="level-item">教学</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/webpack-03-与vue的结合/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">webpack-03-webpack与vue的结合</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/webpack-01-webpack基本配置/">
+                <span class="level-item">webpack-01-基本配置</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'PjazMgPX9CMnvlK4VSYVC5Xe-MdYXbMMI',
+        app_key: 'nJAAmKuae6jFKEcohIC2gatr',
+        placeholder: '我想说...'
+    });
+</script>
+
+    </div>
+</div>
+</div>
                 
 
 
@@ -682,7 +862,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                    <img src="/images/logo.svg" alt="webpack-02-自动打包、插件、Babel等怎么搞" height="28">
                 
                 </a>
                 <p class="is-size-7">

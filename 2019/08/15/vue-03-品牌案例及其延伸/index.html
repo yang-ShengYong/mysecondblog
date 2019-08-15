@@ -3,20 +3,23 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>分类 - ysyのblog</title>
+<title>vue-03-品牌案例及其延伸 - ysyのblog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="hello world,hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ysyのblog">
-<meta property="og:url" content="https://yang-shengyong.github.io/categories/index.html">
+    <meta name="description" content="品牌案例 详见 code 文件夹  vue 调试工具vue-devtools插件的安装和使用过滤器 Vue.js允许自定义过滤器，可被用作常见的文本格式化。过滤器用在两个地方：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-03-品牌案例及其延伸">
+<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/vue-03-品牌案例及其延伸/index.html">
 <meta property="og:site_name" content="ysyのblog">
+<meta property="og:description" content="品牌案例 详见 code 文件夹  vue 调试工具vue-devtools插件的安装和使用过滤器 Vue.js允许自定义过滤器，可被用作常见的文本格式化。过滤器用在两个地方：">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
+<meta property="og:updated_time" content="2019-07-06T06:24:44.864Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ysyのblog">
+<meta name="twitter:title" content="vue-03-品牌案例及其延伸">
+<meta name="twitter:description" content="品牌案例 详见 code 文件夹  vue 调试工具vue-devtools插件的安装和使用过滤器 Vue.js允许自定义过滤器，可被用作常见的文本格式化。过滤器用在两个地方：">
 <meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
 
 
@@ -91,7 +94,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                <img src="/images/logo.svg" alt="vue-03-品牌案例及其延伸" height="28">
             
             </a>
         </div>
@@ -103,7 +106,7 @@
                 
                 <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active" href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
                 <a class="navbar-item" href="/tags">Tags</a>
                 
@@ -136,27 +139,216 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.001Z">2019-08-15</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 807 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                vue-03-品牌案例及其延伸
+            
+        </h1>
+        <div class="content">
+            <h4 id="品牌案例"><a href="#品牌案例" class="headerlink" title="品牌案例"></a>品牌案例</h4><ul>
+<li>详见 code 文件夹</li>
+</ul>
+<h4 id="vue-调试工具vue-devtools插件的安装和使用"><a href="#vue-调试工具vue-devtools插件的安装和使用" class="headerlink" title="vue 调试工具vue-devtools插件的安装和使用"></a>vue 调试工具<strong>vue-devtools</strong>插件的安装和使用</h4><h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><ul>
+<li><p>Vue.js允许自定义过滤器，<strong>可被用作常见的文本格式化</strong>。过滤器用在两个地方：</p>
+<a id="more"></a>
+
+<ul>
+<li>mustache插值</li>
+<li>v-bind表达式</li>
+</ul>
+</li>
+<li><p>过滤器被添加在JavaScript表达式尾部，由“管道”符指示</p>
+</li>
+<li><p>定义语法：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123; msg | msgFormat(a, b, c) &#125;&#125;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">定义过滤器</span><br><span class="line">Vue.filter(&apos;过滤器名&apos;, function (第一个参数必须是msg, a, b, c) &#123;&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>全局过滤器：所有vue实例都能用</p>
+</li>
+<li><p>局部（私有）过滤器：</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="hljs-string">'#app'</span>,</span><br><span class="line">  data: &#123;&#125;</span><br><span class="line">  methods: &#123;&#125;</span><br><span class="line">  filters: &#123;</span><br><span class="line">    dataFormat: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="hljs-comment">//过滤器优先调用私有过滤器</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>处理字符串新方法（补全字符串）：</p>
+<ul>
+<li>padStart(补到多长, ‘用什么来补’) //向前补</li>
+<li>padEnd(补到多长, ‘用什么来补’) //向后补</li>
+</ul>
+</li>
+</ul>
+<h4 id="自定义键盘修饰符"><a href="#自定义键盘修饰符" class="headerlink" title="自定义键盘修饰符"></a>自定义键盘修饰符</h4><ul>
+<li><p>Vue中给的 @keyup.enter</p>
+<ul>
+<li>.enter</li>
+<li>.tab</li>
+<li>.delete</li>
+<li>.esc</li>
+<li>.space</li>
+<li>.up</li>
+<li>.down</li>
+<li>.left</li>
+<li>.right</li>
+</ul>
+</li>
+<li><p>可以通过全局 config.keyCodes 对象自定义来使用</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.config.keyCodes.f1 = <span class="hljs-number">112</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> @<span class="hljs-attr">keyup.f1</span>=<span class="hljs-string">"add()"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="自定义全局指令"><a href="#自定义全局指令" class="headerlink" title="自定义全局指令"></a>自定义全局指令</h4><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">v-focus</span> &gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!-- 设置指令时得加 v-  定义时不用 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="hljs-string">'focus'</span>, &#123;</span><br><span class="line">    bind: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-comment">//el 就是原生的DOM元素</span></span><br><span class="line">        <span class="hljs-comment">//bind: 绑定到el上的指令会在el插入到页面之前执行，只执行一次</span></span><br><span class="line">    &#125;,</span><br><span class="line">    inserted: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-comment">//inserted：el插入到页面中后才执行，只执行一次</span></span><br><span class="line">    &#125;,</span><br><span class="line">    updated: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-comment">//当VNode更新时会执行，可能执行多次</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>第一个参数必须 el</p>
+<p>第二个参数</p>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">v-color</span>=<span class="hljs-string">"'red'"</span>&gt;</span>ID<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(<span class="hljs-string">'color'</span>, &#123;</span><br><span class="line">     bind: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el, binding</span>) </span>&#123;</span><br><span class="line">       <span class="hljs-built_in">console</span>.log(binding)</span><br><span class="line">       el.style.color = binding.value</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义私有指令"><a href="#自定义私有指令" class="headerlink" title="自定义私有指令"></a>自定义私有指令</h4><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="hljs-string">'#app'</span>,</span><br><span class="line">    data: &#123;&#125;,</span><br><span class="line">    methods: &#123;&#125;,</span><br><span class="line">    filters: &#123;&#125;,</span><br><span class="line">    directives: &#123;</span><br><span class="line">        <span class="hljs-string">'focus'</span>: &#123;</span><br><span class="line">            bind: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>&#123;&#125;,</span><br><span class="line">            inserted: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>&#123;&#125;,</span><br><span class="line">            updated: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el</span>) </span>&#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义指令简写"><a href="#自定义指令简写" class="headerlink" title="自定义指令简写"></a>自定义指令简写</h4><figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> Vue.directive(<span class="hljs-string">'color'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">el, binding</span>) </span>&#123;</span><br><span class="line">        <span class="hljs-built_in">console</span>.log(binding)</span><br><span class="line">        el.style.color = binding.value</span><br><span class="line">      &#125;</span><br><span class="line">  )</span><br><span class="line"><span class="hljs-comment">//不写成对象形式，会默认写在了bind和updated里面</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h4><ul>
+<li><p>生命周期事件=生命周期函数=生命周期钩子</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">beforeCreate <span class="hljs-comment">//初始化生命周期</span></span><br><span class="line">created <span class="hljs-comment">// 可以获得data中的数据和methods中的方法</span></span><br><span class="line">beforeMount <span class="hljs-comment">//挂起之前渲染模板</span></span><br><span class="line">mounted <span class="hljs-comment">//模板挂起完毕</span></span><br><span class="line">beforeUpdate <span class="hljs-comment">//数据改变触发才会beforeUpdate，然后创建虚拟Dom重新渲染</span></span><br><span class="line">updated <span class="hljs-comment">//重新渲染完毕</span></span><br><span class="line">beforeDestory</span><br><span class="line">destoryed</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cn.vuejs.org/images/lifecycle.png" alt="Vue å®ä¾çå½å¨æ"></p>
+</li>
+</ul>
+<h4 id="vue-resource-axios-实现get-post-jsonp请求"><a href="#vue-resource-axios-实现get-post-jsonp请求" class="headerlink" title="vue-resource(axios)实现get,post,jsonp请求"></a>vue-resource(axios)实现get,post,jsonp请求</h4><ul>
+<li><p>vue-resource依赖vue</p>
+</li>
+<li><p>vue.js是定义了Vue构造函数，vue-resource是在vm实例上挂载了$http属性</p>
+</li>
+<li><p>get请求：</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">            <span class="hljs-keyword">get</span>:function()&#123;</span><br><span class="line">                <span class="hljs-comment">//发送get请求</span></span><br><span class="line">                <span class="hljs-keyword">this</span>.$http.get(<span class="hljs-string">'/try/ajax/ajax_info.txt'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>&#123;</span><br><span class="line">                    <span class="hljs-built_in">document</span>.write(res.body);    </span><br><span class="line">                &#125;,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">                    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'请求失败处理'</span>);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>post请求</p>
+<blockquote>
+<p>post发送数据到后端，需要第三个参数{emulateJSON:true}</p>
+<p>emulateJSON 的作用： 如果Web服务器无法处理编码为 application/json 的请求，你可以启用 emulateJSON 选项。</p>
+</blockquote>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">    post: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">this</span>.$http.post(<span class="hljs-string">'/demo.php'</span>, &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">'jack'</span>&#125;, &#123;<span class="hljs-attr">emulateJSON</span>: <span class="hljs-literal">true</span>&#125;)</span><br><span class="line">            .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">res</span>) </span>&#123;</span><br><span class="line">            </span><br><span class="line">        &#125;, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>&#123;</span><br><span class="line">            </span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>jsonp请求</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">            <span class="hljs-keyword">get</span>:function()&#123;</span><br><span class="line">                <span class="hljs-comment">//发送jsonp请求</span></span><br><span class="line">               				                   		<span class="hljs-keyword">this</span>.$http.jsonp(<span class="hljs-string">'/try/ajax/ajax_info.txt'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>&#123;</span><br><span class="line">                    <span class="hljs-built_in">document</span>.write(res.body);    </span><br><span class="line">                &#125;,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">                    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'请求失败处理'</span>);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置根地址：</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.http.options.root = <span class="hljs-string">'http://vue.studyit.io/'</span></span><br></pre></td></tr></table></figure>
+
+<p>发请求是使用相对路径且不要带斜线</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">this</span>.$http.get(<span class="hljs-string">'try/ajax/ajax_info.txt'</span>).then()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>全局配置{emulateJSON: true}</p>
+<ul>
+<li>Vue.http.options.emulateJSON = true</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/教学/">
-            <span class="level-start">
-                <span class="level-item">教学</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="微信"></div>
+</a>
+
+                
         </div>
     </div>
-</div></div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/vue-04-vue动画/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">vue-04-vue动画</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/vue-02-指令和属性/">
+                <span class="level-item">vue-02-指令和属性</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'PjazMgPX9CMnvlK4VSYVC5Xe-MdYXbMMI',
+        app_key: 'nJAAmKuae6jFKEcohIC2gatr',
+        placeholder: '我想说...'
+    });
+</script>
+
+    </div>
+</div>
+</div>
                 
 
 
@@ -682,7 +874,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="ysyのblog" height="28">
+                    <img src="/images/logo.svg" alt="vue-03-品牌案例及其延伸" height="28">
                 
                 </a>
                 <p class="is-size-7">
