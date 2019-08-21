@@ -17,7 +17,7 @@
 <meta property="og:description" content="let 和 const let有块作用域 在同一个作用域内，let声明的变量不能重复 var 定义的变量会提升 let 定义的变量不提升，不能在声明前使用   const 有块级作用域 一旦赋值不能改变 声明必赋值 let user = {} const PERSON = user user改变，PERSON不会报错，因为PERSON的值是个指针">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-21T04:25:08.399Z">
+<meta property="og:updated_time" content="2019-08-21T12:47:01.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6 精炼">
 <meta name="twitter:description" content="let 和 const let有块作用域 在同一个作用域内，let声明的变量不能重复 var 定义的变量会提升 let 定义的变量不提升，不能在声明前使用   const 有块级作用域 一旦赋值不能改变 声明必赋值 let user = {} const PERSON = user user改变，PERSON不会报错，因为PERSON的值是个指针">
@@ -156,7 +156,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 816 个字)
+                    7 分钟 读完 (大约 999 个字)
                 </span>
                 
                 
@@ -319,10 +319,38 @@
 </ul>
 <h3 id="Promise-像同步一样写异步代码"><a href="#Promise-像同步一样写异步代码" class="headerlink" title="Promise 像同步一样写异步代码"></a>Promise 像同步一样写异步代码</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> p1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  $.ajax(&#123;</span><br><span class="line">    url: <span class="hljs-string">'demo1.txt'</span>,</span><br><span class="line">    dataType: <span class="hljs-string">'json'</span>,</span><br><span class="line">    success (demo1) &#123;</span><br><span class="line">      resolve(demo1)</span><br><span class="line">    &#125;,</span><br><span class="line">    error (err) &#123;</span><br><span class="line">      reject(err)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">let</span> p2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  $.ajax(&#123;</span><br><span class="line">    url: <span class="hljs-string">'demo2.txt'</span>,</span><br><span class="line">    dataType: <span class="hljs-string">'json'</span>,</span><br><span class="line">    success (demo2) &#123;</span><br><span class="line">      resolve(demo2)</span><br><span class="line">    &#125;,</span><br><span class="line">    error (err) &#123;</span><br><span class="line">      reject(err)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">Promise</span>.all([p1, p2]).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-comment">//成功回调</span></span><br><span class="line">&#125;, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-comment">//失败回调</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
+<h3 id="generator函数"><a href="#generator函数" class="headerlink" title="generator函数"></a>generator函数</h3><ul>
+<li><p>普通函数——一路执行到底不能停</p>
+</li>
+<li><p>generator函数——中间能停</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> *<span class="hljs-title">show</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="hljs-string">'a'</span>)</span><br><span class="line">  <span class="hljs-keyword">yield</span></span><br><span class="line">  alert(<span class="hljs-string">'b'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">let</span> genObj = show()</span><br><span class="line">genObj.next()</span><br><span class="line">genObj.next()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>yield</strong> 可以传参</p>
+<ul>
+<li><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> *<span class="hljs-title">show</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="hljs-string">'a'</span>)</span><br><span class="line">  <span class="hljs-keyword">let</span> param = <span class="hljs-keyword">yield</span></span><br><span class="line">  alert(<span class="hljs-string">'b'</span>)</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(param) <span class="hljs-comment">//5</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">let</span> genObj = show()</span><br><span class="line">genObj.next(<span class="hljs-number">12</span>) <span class="hljs-comment">//实际上第一个next传的参数没用</span></span><br><span class="line">genObj.next(<span class="hljs-number">5</span>) <span class="hljs-comment">//5传给param</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>yield</strong> 可以返回</p>
+<ul>
+<li><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> *<span class="hljs-title">show</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="hljs-string">'a'</span>)</span><br><span class="line">  <span class="hljs-keyword">let</span> param = <span class="hljs-keyword">yield</span> <span class="hljs-number">100</span> <span class="hljs-comment">//可以把yield看作是每一步的return</span></span><br><span class="line">  alert(<span class="hljs-string">'b'</span>)</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(param) <span class="hljs-comment">//5</span></span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">120</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">let</span> genObj = show()</span><br><span class="line"><span class="hljs-keyword">let</span> result1 = genObj.next(<span class="hljs-number">12</span>) <span class="hljs-comment">//接收返回来的 100</span></span><br><span class="line"><span class="hljs-keyword">let</span> result2 = genObj.next(<span class="hljs-number">5</span>) <span class="hljs-comment">//return 120</span></span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="async-await推翻generator"><a href="#async-await推翻generator" class="headerlink" title="async await推翻generator"></a>async await推翻generator</h3><ul>
+<li><p>不再依赖runner</p>
+</li>
+<li><p>支持 =&gt;</p>
+</li>
+<li><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> show = <span class="hljs-keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> data = <span class="hljs-keyword">await</span> $.ajax(&#123;..........&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
+<blockquote>
+<p>在generator里yield的后面异步请求的数据想要给下面代码得依靠runner插件（genObj.next()）</p>
+</blockquote>
+</li>
+</ul>
 
         </div>
         
