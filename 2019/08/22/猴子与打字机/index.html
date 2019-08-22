@@ -9,7 +9,7 @@
 
 
     <meta name="description" content="有一个挺有趣的定理：猴子与打字机  猴子和打字机（Monkeys and Typewriters），如果无数多的猴子在无数多的打字机上随机的打字，并持续无限久的时间，那么在某个时候，它们必然会打出莎士比亚的全部著作。猴子和打字机的设想在20世纪初被法国数学家Emile Borel推广，但其基本思想——无数多的人员和无数多的时间能产生任何/所有东西——可以追溯至亚里士多德。 来自：百度百科">
-<meta name="keywords" content="人生不仅有技术,有趣的东西">
+<meta name="keywords" content="JavaScript,人生不仅有技术,有趣的东西">
 <meta property="og:type" content="article">
 <meta property="og:title" content="猴子与打字机">
 <meta property="og:url" content="https://yang-shengyong.github.io/2019/08/22/猴子与打字机/index.html">
@@ -17,7 +17,7 @@
 <meta property="og:description" content="有一个挺有趣的定理：猴子与打字机  猴子和打字机（Monkeys and Typewriters），如果无数多的猴子在无数多的打字机上随机的打字，并持续无限久的时间，那么在某个时候，它们必然会打出莎士比亚的全部著作。猴子和打字机的设想在20世纪初被法国数学家Emile Borel推广，但其基本思想——无数多的人员和无数多的时间能产生任何/所有东西——可以追溯至亚里士多德。 来自：百度百科">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-22T15:57:47.072Z">
+<meta property="og:updated_time" content="2019-08-22T16:39:03.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="猴子与打字机">
 <meta name="twitter:description" content="有一个挺有趣的定理：猴子与打字机  猴子和打字机（Monkeys and Typewriters），如果无数多的猴子在无数多的打字机上随机的打字，并持续无限久的时间，那么在某个时候，它们必然会打出莎士比亚的全部著作。猴子和打字机的设想在20世纪初被法国数学家Emile Borel推广，但其基本思想——无数多的人员和无数多的时间能产生任何/所有东西——可以追溯至亚里士多德。 来自：百度百科">
@@ -156,7 +156,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 217 个字)
+                    5 分钟 读完 (大约 753 个字)
                 </span>
                 
                 
@@ -182,8 +182,52 @@
 
 <p>于是乎，我就用电脑模拟试了一下</p>
 <ul>
-<li>首先我选用的是常用的中文汉字，Unicode编码从[\u4e00-\u9fa5]，这之间共有20901个汉字</li>
-<li>然后我写了段程序让</li>
+<li><p>首先我选用的是常用的中文汉字，Unicode编码从[\u4e00-\u9fa5]，这之间共有20901个汉字</p>
+</li>
+<li><p>然后我写了段程序让电脑逐个打出汉字直到打出我想要的内容为止</p>
+<ul>
+<li>我想要电脑打出 <strong>“鸡你太美”</strong> 这句话</li>
+</ul>
+</li>
+<li><p>我的代码如下：</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> str = <span class="hljs-string">"鸡你太美"</span></span><br><span class="line"><span class="hljs-keyword">var</span> strLen = str.length - <span class="hljs-number">1</span></span><br><span class="line"><span class="hljs-keyword">var</span> lastChinese = <span class="hljs-string">""</span></span><br><span class="line"><span class="hljs-keyword">var</span> index = <span class="hljs-number">0</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> startTime = <span class="hljs-built_in">Date</span>.now()</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; ; i++) &#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> num_10 = <span class="hljs-number">19968</span> + <span class="hljs-built_in">parseInt</span>(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">20901</span>)</span><br><span class="line">  <span class="hljs-keyword">var</span> str_16 = num_10.toString(<span class="hljs-number">16</span>)</span><br><span class="line">  str_16 = <span class="hljs-string">"\\u"</span> + str_16</span><br><span class="line">  lastChinese = <span class="hljs-built_in">eval</span>(<span class="hljs-string">"'"</span> + str_16 + <span class="hljs-string">"'"</span>)</span><br><span class="line">  <span class="hljs-keyword">if</span> (lastChinese == str[index]) &#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (index == strLen) &#123;</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"found!"</span>)</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"在第"</span> + <span class="hljs-string">" "</span> + i + <span class="hljs-string">" "</span> + <span class="hljs-string">"位打印出来了"</span> + <span class="hljs-string">"\""</span> + str + <span class="hljs-string">"\""</span>)</span><br><span class="line">      <span class="hljs-keyword">break</span></span><br><span class="line">    &#125;</span><br><span class="line">    index++</span><br><span class="line">  &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">    index = <span class="hljs-number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-keyword">var</span> endTime = <span class="hljs-built_in">Date</span>.now()</span><br><span class="line"><span class="hljs-keyword">var</span> spendTime = endTime - startTime</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">"用时："</span> + <span class="hljs-string">" "</span> + spendTime + <span class="hljs-string">"ms"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开始测试</p>
+<ul>
+<li><p>我想要电脑打出 <strong>“鸡”</strong></p>
+</li>
+<li><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ node test.js</span><br><span class="line">found!</span><br><span class="line">在第 1932 位打印出来了<span class="hljs-string">"鸡"</span></span><br><span class="line">用时： 22ms</span><br><span class="line"></span><br><span class="line">$ node test.js</span><br><span class="line">found!</span><br><span class="line">在第 44729 位打印出来了<span class="hljs-string">"鸡"</span></span><br><span class="line">用时： 271ms</span><br><span class="line"></span><br><span class="line">$ node test.js</span><br><span class="line">found!</span><br><span class="line">在第 1663 位打印出来了<span class="hljs-string">"鸡"</span></span><br><span class="line">用时： 18ms</span><br><span class="line"></span><br><span class="line">$ node test.js</span><br><span class="line">found!</span><br><span class="line">在第 17094 位打印出来了<span class="hljs-string">"鸡"</span></span><br><span class="line">用时： 126ms</span><br></pre></td></tr></table></figure>
+
+<p>基本都是秒出结果</p>
+</li>
+<li><p>我想要电脑打出 <strong>“鸡你”</strong></p>
+</li>
+<li><p>因为在我自己电脑上运行时间太长而且风扇要起飞，于是放在了云服务器上跑</p>
+</li>
+<li><p>可惜结果我没记录下来，但我清楚的记得</p>
+<ul>
+<li><p>一个是在1300多万位处打印出来了，耗时大约33秒</p>
+</li>
+<li><p>其他结果不稳定，有的就一直出不来</p>
+</li>
+<li><p>就在我在写下面的总结的时候又出现一结果 哈哈哈</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">found!</span><br><span class="line">在第 476324604 位打印出来了<span class="hljs-string">"鸡你"</span></span><br><span class="line">用时： 502102ms</span><br><span class="line"></span><br><span class="line">found!</span><br><span class="line">在第 445763874 位打印出来了<span class="hljs-string">"鸡你"</span></span><br><span class="line">用时： 452780ms</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>至于想打印<strong>鸡你太美</strong> 我就没往下再等了</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>总结和收获</strong></li>
+<li>想要的内容越多，耗时就越多，基本呈指数型增长，当然我同时只用了一只猴子在打字<ul>
+<li>如果打英文相较于中文会更快，毕竟英文才26个字母和1个空格，而汉字是20901个排列组合</li>
+<li>“猴子和打字机”定理是用来描述无限的本质的最好方法之一</li>
+<li>很多封装好的方法来处理大量的数据可能写法上很方便，但效率却并不太高。因此，懂得方法的底层实现很重要</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -192,7 +236,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/人生不仅有技术/">人生不仅有技术</a>, <a class="has-link-grey -link" href="/tags/有趣的东西/">有趣的东西</a>
+                    <a class="has-link-grey -link" href="/tags/JavaScript/">JavaScript</a>, <a class="has-link-grey -link" href="/tags/人生不仅有技术/">人生不仅有技术</a>, <a class="has-link-grey -link" href="/tags/有趣的东西/">有趣的东西</a>
                 </div>
             </div>
         </div>
@@ -525,7 +569,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/nodejs/" style="font-size: 18px;">nodejs</a> <a href="/tags/vuejs/" style="font-size: 16px;">vuejs</a> <a href="/tags/vuex/" style="font-size: 10px;">vuex</a> <a href="/tags/webpack/" style="font-size: 14px;">webpack</a> <a href="/tags/人生不仅有技术/" style="font-size: 12px;">人生不仅有技术</a> <a href="/tags/基础知识/" style="font-size: 20px;">基础知识</a> <a href="/tags/情商/" style="font-size: 10px;">情商</a> <a href="/tags/教学/" style="font-size: 10px;">教学</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/有趣的东西/" style="font-size: 10px;">有趣的东西</a> <a href="/tags/栈/" style="font-size: 10px;">栈</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/礼仪/" style="font-size: 10px;">礼仪</a>
+        <a href="/tags/JavaScript/" style="font-size: 12px;">JavaScript</a> <a href="/tags/es6/" style="font-size: 10px;">es6</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/nodejs/" style="font-size: 18px;">nodejs</a> <a href="/tags/vuejs/" style="font-size: 16px;">vuejs</a> <a href="/tags/vuex/" style="font-size: 10px;">vuex</a> <a href="/tags/webpack/" style="font-size: 14px;">webpack</a> <a href="/tags/人生不仅有技术/" style="font-size: 12px;">人生不仅有技术</a> <a href="/tags/基础知识/" style="font-size: 20px;">基础知识</a> <a href="/tags/情商/" style="font-size: 10px;">情商</a> <a href="/tags/教学/" style="font-size: 10px;">教学</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/有趣的东西/" style="font-size: 10px;">有趣的东西</a> <a href="/tags/栈/" style="font-size: 10px;">栈</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/礼仪/" style="font-size: 10px;">礼仪</a>
     </div>
 </div>
 
@@ -674,7 +718,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -954,7 +998,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
