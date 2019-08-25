@@ -3,25 +3,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>nodejs-深入理解nodejs中的模块 - ysyのblog</title>
+<title>canvas 实现图片打码 - ysyのblog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="引言：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载">
-<meta name="keywords" content="nodejs">
+    <meta name="description" content="我的收获 对基础api的掌握 ctx.drawImage(img, x, y, img.width, img.height) 获取像素 ctx.getImageData(x1, y1, x2, y2) 返回的对象有三个属性，width、height、data（所有像素的rgba做成的数组） 设置像素ctx.putImageData(imageData, x, y) 创建像素区域，默认黑色透明 ct">
+<meta name="keywords" content="JavaScript,html,h5,canvas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nodejs-深入理解nodejs中的模块">
-<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/15/我第二天学nodejs的笔记00/index.html">
+<meta property="og:title" content="canvas 实现图片打码">
+<meta property="og:url" content="https://yang-shengyong.github.io/2019/08/25/canvas实现图片打码/index.html">
 <meta property="og:site_name" content="ysyのblog">
-<meta property="og:description" content="引言：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载">
+<meta property="og:description" content="我的收获 对基础api的掌握 ctx.drawImage(img, x, y, img.width, img.height) 获取像素 ctx.getImageData(x1, y1, x2, y2) 返回的对象有三个属性，width、height、data（所有像素的rgba做成的数组） 设置像素ctx.putImageData(imageData, x, y) 创建像素区域，默认黑色透明 ct">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://yang-shengyong.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2019-08-15T08:28:03.804Z">
+<meta property="og:image" content="https://yang-shengyong.github.io/images/hxm.jpg">
+<meta property="og:updated_time" content="2019-08-25T07:51:12.712Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nodejs-深入理解nodejs中的模块">
-<meta name="twitter:description" content="引言：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载">
-<meta name="twitter:image" content="https://yang-shengyong.github.io/images/og_image.png">
+<meta name="twitter:title" content="canvas 实现图片打码">
+<meta name="twitter:description" content="我的收获 对基础api的掌握 ctx.drawImage(img, x, y, img.width, img.height) 获取像素 ctx.getImageData(x1, y1, x2, y2) 返回的对象有三个属性，width、height、data（所有像素的rgba做成的数组） 设置像素ctx.putImageData(imageData, x, y) 创建像素区域，默认黑色透明 ct">
+<meta name="twitter:image" content="https://yang-shengyong.github.io/images/hxm.jpg">
 
 
 
@@ -95,7 +95,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="nodejs-深入理解nodejs中的模块" height="28">
+                <img src="/images/logo.svg" alt="canvas 实现图片打码" height="28">
             
             </a>
         </div>
@@ -142,21 +142,27 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/hxm.jpg" alt="canvas 实现图片打码">
+        </span>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-08-15T07:35:19.082Z">2019-08-15</time>
+                <time class="level-item has-text-grey" datetime="2019-08-25T06:55:45.333Z">2019-08-25</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/nodejs/">nodejs</a>
+                <a class="has-link-grey -link" href="/categories/html/">html</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 277 个字)
+                    4 分钟 读完 (大约 564 个字)
                 </span>
                 
                 
@@ -170,49 +176,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                nodejs-深入理解nodejs中的模块
+                canvas 实现图片打码
             
         </h1>
         <div class="content">
-            <blockquote>
-<p><strong>引言</strong>：node为JS提供了很多服务器级别的API，这些API绝大部分在核心模块里，需要用require加载</p>
-</blockquote>
+            <h3 id="我的收获"><a href="#我的收获" class="headerlink" title="我的收获"></a>我的收获</h3><ul>
+<li>对基础api的掌握<ul>
+<li>ctx.drawImage(img, x, y, img.width, img.height)</li>
+<li>获取像素 ctx.getImageData(x1, y1, x2, y2) 返回的对象有三个属性，width、height、data（所有像素的rgba做成的数组）</li>
+<li>设置像素ctx.putImageData(imageData, x, y)</li>
+<li>创建像素区域，默认黑色透明 ctx.createImageData(width, height)</li>
+</ul>
+</li>
+<li>难点<ul>
+<li>封装两个方法：取像素点的rgba、设置像素点的rgba</li>
+<li>打码：取一块像素区域中的rbga覆盖整个像素区域</li>
+</ul>
+</li>
+</ul>
 <a id="more"></a>
-<h3 id="1、node模块有三种"><a href="#1、node模块有三种" class="headerlink" title="1、node模块有三种"></a>1、node模块有三种</h3><ul>
-<li><p>具名的核心模块</p>
-<ul>
-<li>fs</li>
-<li>http</li>
-<li>os</li>
-<li>……</li>
-</ul>
-</li>
-<li><p>用户自己编写的模块</p>
-<ul>
-<li>相对路径必须加 ./ ，不能省略，否则就把它当成核心模块了</li>
-<li>可以省略后缀名<h3 id="2、node中没有全局作用域"><a href="#2、node中没有全局作用域" class="headerlink" title="2、node中没有全局作用域"></a>2、node中没有全局作用域</h3></li>
-</ul>
-</li>
-<li><p>内部访问不到外部</p>
-</li>
-<li><p>外部访问不到内部</p>
-<h3 id="3、如何让模块与模块之间通信呢？"><a href="#3、如何让模块与模块之间通信呢？" class="headerlink" title="3、如何让模块与模块之间通信呢？"></a>3、如何让模块与模块之间通信呢？</h3></li>
-<li><p>exports</p>
-</li>
-<li><p>module.exports<br>在一个模块中，node会隐式地</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = &#123;</span><br><span class="line">  exports = &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-keyword">var</span> exports = <span class="hljs-built_in">module</span>.exports</span><br><span class="line"><span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports</span><br></pre></td></tr></table></figure>
 
-<p>由此可见，exports和module.exports是用来导出模块中想要对外展示的成员，所以我们可以把要对外展示的成员这么写：</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//导出一个成员</span></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = 成员</span><br><span class="line"><span class="hljs-comment">//这样可以在别的模块require之后就用</span></span><br><span class="line"><span class="hljs-comment">//或者</span></span><br><span class="line">exports.成员名 = 成员</span><br><span class="line"><span class="hljs-comment">//这样在别的模块require之后，还得.成员名之后再用</span></span><br><span class="line"><span class="hljs-comment">//导出多个成员</span></span><br><span class="line"><span class="hljs-built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="hljs-comment">//里面写成员</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://upload-images.jianshu.io/upload_images/19286703-317ba434754a20df.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打码效果.PNG"><br><img src="https://upload-images.jianshu.io/upload_images/19286703-783caa520af2d97e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="高度打码.PNG"><br><img src="https://upload-images.jianshu.io/upload_images/19286703-d7accafce49b9250.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="轻微打码.PNG"></p>
+<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span></span><br><span class="line">    #canvas &#123;</span><br><span class="line">      position: absolute;</span><br><span class="line">      margin: auto;</span><br><span class="line">      top: 0;</span><br><span class="line">      bottom: 0;</span><br><span class="line">      left: 0;</span><br><span class="line">      right: 0;</span><br><span class="line">      background: #cccccc</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"canvas"</span>&gt;</span>您的浏览器不支持canvas，<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.google.cn/intl/zh-CN/chrome/"</span>&gt;</span>立即升级<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span></span><br><span class="line">  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-javascript">    <span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'canvas'</span>)</span></span><br><span class="line"><span class="hljs-javascript">    <span class="hljs-keyword">if</span> (canvas.getContext) &#123;</span></span><br><span class="line"><span class="hljs-javascript">      <span class="hljs-keyword">var</span> ctx = canvas.getContext(<span class="hljs-string">'2d'</span>)</span></span><br><span class="line"><span class="hljs-javascript">      <span class="hljs-keyword">var</span> img = <span class="hljs-keyword">new</span> Image()</span></span><br><span class="line"><span class="hljs-javascript">      img.src = <span class="hljs-string">"黄晓明.jpg"</span> <span class="hljs-comment">//————————————————你可以选择要打码图片的路径</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-javascript">      img.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span></span><br><span class="line">        canvas.width = img.width * 2</span><br><span class="line">        canvas.height = img.height</span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-comment">//插入图片</span></span></span><br><span class="line"><span class="hljs-javascript">        ctx.drawImage(<span class="hljs-keyword">this</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, img.width, img.height)</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-comment">//打码</span></span></span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">var</span> mskSize = <span class="hljs-number">8</span> <span class="hljs-comment">//————————————————您可以选择打码的程度，数越大越看不清</span></span></span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">var</span> imageData = ctx.getImageData(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, img.width, img.height)</span></span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> x = <span class="hljs-number">0</span>; x &lt; img.width; x += mskSize) &#123;</span></span><br><span class="line"><span class="hljs-javascript">          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> y = <span class="hljs-number">0</span>; y &lt; img.height; y += mskSize) &#123;</span></span><br><span class="line"><span class="hljs-javascript">            <span class="hljs-comment">//在mskSize x mskSize大小的像素区域中随机取一个颜色样式</span></span></span><br><span class="line"><span class="hljs-javascript">            <span class="hljs-keyword">var</span> color = getPointColor(imageData, <span class="hljs-built_in">parseInt</span>(x + <span class="hljs-built_in">Math</span>.random() * mskSize), <span class="hljs-built_in">parseInt</span>(y + <span class="hljs-built_in">Math</span>.random() * mskSize))</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-javascript">            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> a = x, n = <span class="hljs-number">0</span>; n &lt; mskSize; a++ , n++) &#123;</span></span><br><span class="line"><span class="hljs-javascript">              <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> b = y, m = <span class="hljs-number">0</span>; m &lt; mskSize; b++ , m++) &#123;</span></span><br><span class="line"><span class="hljs-javascript">                <span class="hljs-comment">//把取到的颜色渲染到mskSize x mskSize大小的像素区域中</span></span></span><br><span class="line">                setPointColor(imageData, a, b, color)</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="hljs-javascript">        ctx.putImageData(imageData, img.width + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>) <span class="hljs-comment">//在右侧绘制打码后的图片</span></span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-javascript">      <span class="hljs-comment">//封装两个方法：取像素点、设置像素点</span></span></span><br><span class="line"><span class="hljs-javascript">      <span class="hljs-comment">//获取某像素点的color</span></span></span><br><span class="line"><span class="hljs-javascript">      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getPointColor</span>(<span class="hljs-params">imageData, x, y</span>) </span>&#123;</span></span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">var</span> color = []</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">var</span> data = imageData.data,</span></span><br><span class="line">          w = imageData.width,</span><br><span class="line">          h = imageData.height</span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">var</span> num = y * w + x</span></span><br><span class="line"></span><br><span class="line">        color[0] = data[4 * num]</span><br><span class="line">        color[1] = data[4 * num + 1]</span><br><span class="line">        color[2] = data[4 * num + 2]</span><br><span class="line">        color[3] = data[4 * num + 3]</span><br><span class="line"></span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">return</span> color</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-javascript">      <span class="hljs-comment">//设置某像素点的color</span></span></span><br><span class="line"><span class="hljs-javascript">      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setPointColor</span>(<span class="hljs-params">imageData, x, y, color</span>) </span>&#123;</span></span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">var</span> data = imageData.data,</span></span><br><span class="line">          w = imageData.width,</span><br><span class="line">          h = imageData.height</span><br><span class="line"><span class="hljs-javascript">        <span class="hljs-keyword">var</span> num = y * w + x</span></span><br><span class="line">        data[4 * num] = color[0]</span><br><span class="line">        data[4 * num + 1] = color[1]</span><br><span class="line">        data[4 * num + 2] = color[2]</span><br><span class="line">        data[4 * num + 3] = color[3]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/nodejs/">nodejs</a>
+                    <a class="has-link-grey -link" href="/tags/JavaScript/">JavaScript</a>, <a class="has-link-grey -link" href="/tags/canvas/">canvas</a>, <a class="has-link-grey -link" href="/tags/h5/">h5</a>, <a class="has-link-grey -link" href="/tags/html/">html</a>
                 </div>
             </div>
         </div>
@@ -252,17 +244,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/15/我第二天学nodejs的笔记01/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">nodejs-在node中使用模板引擎art-template渲染页面</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/webpack-03-与vue的结合/">
-                <span class="level-item">webpack-03-webpack与vue的结合</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/24/canvas时钟/">
+                <span class="level-item">canvas 画一个时钟</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -1172,7 +1157,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="nodejs-深入理解nodejs中的模块" height="28">
+                    <img src="/images/logo.svg" alt="canvas 实现图片打码" height="28">
                 
                 </a>
                 <p class="is-size-7">
